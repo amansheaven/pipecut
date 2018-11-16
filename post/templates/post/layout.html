@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    
+    <title>Rod Cutting Dynamic</title>
+</head>
+<body>
+        
+                <form action="/plot/" method="POST">
+                    {% csrf_token %}
+                    <div class="login">
+                        <div class="login-screen">
+                            <div class="app-title">
+                                <h1>Rod Cutting Dymanic Programming</h1>
+                            </div>
+            
+                            <div class="login-form">
+                                <div class="control-group">
+                                <input type="text" class="login-field" value="" placeholder="Length" name="length">
+                                <label class="login-field-icon fui-user" for="login-name"></label>
+                                </div>
+                 
+                                <div class="control-group">
+                                <input type="text" class="login-field" value="" placeholder="Price" name="price">
+                                <label class="login-field-icon fui-lock" for="login-pass"></label>
+                                </div>
+                 
+                                <input type="submit" value="Compute" class="btn btn-primary btn-large btn-block" >
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 id="foo">Enter data seperated with , only.</h6>
+                </form>
+                
+
+</body>
+</html>
